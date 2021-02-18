@@ -10,6 +10,10 @@ import SignIn from './components/SignIn/SignIn'
 import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 
+// import wine components for CRUD
+import CreateWine from './components/wines/CreateWine/CreateWine'
+import WineIndexAll from './components/wines/IndexAllWines/IndexAllWines'
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -64,6 +68,12 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-wine' render={() => (
+            <CreateWine msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/index' render={() => (
+            <WineIndexAll msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

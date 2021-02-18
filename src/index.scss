@@ -1,1 +1,11 @@
+$primary: #6d597a;
+$secondary: #b56576;
+$danger: #e56b6f;
+$success: #355070;
+$warning: #eaac8b;
+
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: #a06cd5;
+}
