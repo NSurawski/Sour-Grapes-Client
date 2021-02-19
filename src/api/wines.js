@@ -12,16 +12,28 @@ export const wineIndexAll = user => {
   })
 }
 
-// Show Wine
-export const showWine = (id, user) => {
+// Index user wines
+export const wineIndexUser = user => {
+  // console.log('This is wines at axios', user)
   return axios({
-    url: apiUrl + '/wines/' + id,
+    url: apiUrl + '/mywines',
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${user.token}`
     }
   })
 }
+
+// Show Wine
+// export const showWine = (id, user) => {
+//   return axios({
+//     url: apiUrl + '/wines/' + id,
+//     method: 'GET',
+//     headers: {
+//       'Authorization': `Bearer ${user.token}`
+//     }
+//   })
+// }
 
 // Create
 export const createWine = (wine, user) => {

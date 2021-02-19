@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#create-wine">Create Review</Nav.Link>
+    <Nav.Link href="#index-user">Show Your Reviews</Nav.Link>
     <Nav.Link href="#index">Show All Reviews</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
@@ -27,7 +28,7 @@ const alwaysOptions = (
 const Header = ({ user }) => (
   <Navbar bg="primary" variant="dark" expand="md">
     <Navbar.Brand href="#">
-      Sour-Grapes-Client
+      Sour Grapes
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

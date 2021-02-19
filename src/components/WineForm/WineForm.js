@@ -72,7 +72,7 @@ const WineForm = ({ wine, handleSubmit, handleChange }) => {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasicContent">
+          <Form.Group controlId="formBasicReview">
             <Form.Label>Review</Form.Label>
             <Form.Control
               as="textarea"

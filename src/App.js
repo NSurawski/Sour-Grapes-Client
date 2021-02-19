@@ -13,6 +13,8 @@ import ChangePassword from './components/ChangePassword/ChangePassword'
 // import wine components for CRUD
 import CreateWine from './components/wines/CreateWine/CreateWine'
 import WineIndexAll from './components/wines/IndexAllWines/IndexAllWines'
+import WineIndexUser from './components/wines/ShowUserWines/ShowUserWines'
+import WineUpdate from './components/wines/UpdateWine/UpdateWine'
 
 class App extends Component {
   constructor (props) {
@@ -74,6 +76,12 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/index' render={() => (
             <WineIndexAll msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/index-user' render={() => (
+            <WineIndexUser msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/update-wine/:id' render={() => (
+            <WineUpdate msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

@@ -16,11 +16,15 @@ class WineIndexAll extends Component {
 
     wineIndexAll(user)
       .then(res => {
-        this.setState({ wines: res.data.wine })
+        // console.log('this is wine:', res)
+        return res
+      })
+      .then(res => {
+        this.setState({ wines: res.data.wines })
       })
       .then(() => msgAlert({
         heading: 'Index All Wines Successfully',
-        message: 'Click one to see details',
+        message: 'check out your reviews!',
         variant: 'success'
       }))
       .catch(error => {
@@ -46,7 +50,6 @@ class WineIndexAll extends Component {
           <Card.Subtitle className="mb-2 text-muted">{wine.grape}</Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">{wine.region}</Card.Subtitle>
           <Card.Text>{wine.review}</Card.Text>
-          <Card.Link href={`#wines/${wine._id}`}>See Full Wine Review</Card.Link>
         </Card.Body>
       </Card>
     ))
