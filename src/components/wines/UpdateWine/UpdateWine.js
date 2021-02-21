@@ -21,7 +21,6 @@ class UpdateWine extends Component {
         resolved: false
       },
       createId: null,
-      // updateReviewClicked: false,
       showUpdateModal: true
     }
   }
@@ -29,6 +28,7 @@ class UpdateWine extends Component {
   handleClose = (event) => {
     const { history } = this.props
     this.setState({ showUpdateModal: false })
+    // console.log('this is this.props.match.params.id:', this.props.match.params.id)
     history.push(`/wines/${this.props.match.params.id}`)
   }
 

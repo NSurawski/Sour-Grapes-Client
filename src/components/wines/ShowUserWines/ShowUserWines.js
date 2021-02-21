@@ -13,12 +13,17 @@ class WineIndexUser extends Component {
 
     this.state = {
       wines: [],
-      updateReviewClicked: false
+      updateReviewClicked: false,
+      deleteReviewClicked: false
     }
   }
 
   handleUpdate = (event) => {
     this.setState({ updateReviewClicked: true })
+  }
+
+  handleDelete = (event) => {
+    this.setState({ deleteReviewClicked: true })
   }
 
   componentDidMount () {
@@ -43,7 +48,7 @@ class WineIndexUser extends Component {
       })
   }
   render () {
-    const { wines, updateReviewClicked } = this.state
+    const { wines, updateReviewClicked, deleteReviewClicked } = this.state
     if (!wines) {
       return 'Loading...'
     }
@@ -54,8 +59,13 @@ class WineIndexUser extends Component {
         <Redirect to={`/update-wine/${wines.id}`}/>
       )
     }
-    // add this to buttons for delete?
-    // {/*onClick={handleDelete}*/}
+
+    if (deleteReviewClicked) {
+      return (
+        <Redirect to={`/delete-wine/${wines.id}`}/>
+      )
+    }
+
     const winesJsx = wines.map(wine => (
       <Card key={wine._id} style={{ width: '100%', marginTop: '10px' }}>
         <Card.Body>
@@ -67,7 +77,7 @@ class WineIndexUser extends Component {
           <Button variant="secondary" onClick={this.handleUpdate}>
               Update
           </Button>
-          <Button variant="danger">
+          <Button variant="danger" onClick={this.handleDelete}>
               Delete
           </Button>
         </Card.Body>
