@@ -1,8 +1,28 @@
 # Project 3: Sour Grapes (Client)
 Sour Grapes is a web app for wine lovers! Review and keep track of wines you've tried and never forget tasting notes again!
 
+## Front End repo & Deployed Links
+[Front End Repo](https://github.com/NSurawski/Sour-Grapes-Client "Front End Repo")
+[Front End Deployed](https://nsurawski.github.io/Sour-Grapes-Client/#/ "Front End Deployed")
+
+## Back End Repo & Deployed Links
+[Back End Repo](https://github.com/NSurawski/Sour-Grapes-API "Back End Repo")
+[Back End Deployed](https://radiant-ocean-35156.herokuapp.com/ "Back End Deployed")
+
+## Set Up & Installation
+1. Fork and clone this repository
+2. Checkout to a new branch
+3. Run `npm install` to install dependencies
+4. Start server with `npm start`
+
 ## Other Important Links & Resources Used:
 [React CRUD Lesson](https://git.generalassemb.ly/ga-wdi-boston/react-crud/tree/winter/training "React-crud Lesson")
+
+## Wireframes
+[Wireframes](https://imgur.com/0uxw3Ww "Wireframes")
+
+## Screenshot of Web app
+<img width="1440" alt="Sour-Grapes-App" src="https://user-images.githubusercontent.com/64649258/108749065-566de780-750d-11eb-944e-c4471dfa11bf.png">
 
 ## Planning and Story: Development Process and Problem-Solving Strategy:
 
@@ -37,6 +57,3 @@ I went trhough methodically and added each CRUD action one by one, starting with
 - Github Pages
 
 ## Unsolved Problems:
-
-## Wireframes
-![Wireframes](https://imgur.com/0uxw3Ww "Wireframes")

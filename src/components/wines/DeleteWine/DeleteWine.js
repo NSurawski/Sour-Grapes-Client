@@ -1,5 +1,8 @@
 // import React, { Component } from 'react'
-// import { Redirect, withRouter } from 'react-router-dom'
+// import { Redirect, Link, withRouter } from 'react-router-dom'
+//
+// import Card from 'react-bootstrap/Card'
+// import Button from 'react-bootstrap/Button'
 //
 // import { wineDelete } from '../../../api/wines'
 //
@@ -9,6 +12,7 @@
 //
 //     this.state = {
 //       wine: null,
+//       // wines: [],
 //       exists: true
 //     }
 //   }
@@ -53,10 +57,40 @@
 //     const { deleted } = this.state
 //     if (deleted) {
 //       // console.log('this is this.props.match.params.id:', this.props.match.params.id)
-//       return <Redirect to={`/wines/${this.props.match.params.id}`} />
+//       return (
+//         <Redirect to={`/wines/${this.props.match.params.id}`} />
+//       )
 //     }
-//     return (
 //
+//     const wines = []
+//     const winesJsx = wines.map(wine => (
+//       <Card key={wine._id} style={{ width: '100%', marginTop: '10px' }}>
+//         <Card.Body>
+//           <Card.Title>{wine.producer}</Card.Title>
+//           <Card.Subtitle className="mb-2 text-muted">{wine.type}</Card.Subtitle>
+//           <Card.Subtitle className="mb-2 text-muted">{wine.grape}</Card.Subtitle>
+//           <Card.Subtitle className="mb-2 text-muted">{wine.region}</Card.Subtitle>
+//           <Card.Text>{wine.review}</Card.Text>
+//           <Link to={`/update-wine/${wine._id}`}>
+//             <Button variant="secondary">
+//               Update
+//             </Button>
+//           </Link>
+//           <Link to={`/delete-wine/${wine._id}`}>
+//             <Button variant="danger" onClick={this.handleDelete}>
+//               Delete
+//             </Button>
+//           </Link>
+//         </Card.Body>
+//       </Card>
+//     ))
+//
+//     return (
+//       <div>
+//         <ul>
+//           {winesJsx}
+//         </ul>
+//       </div>
 //     )
 //   }
 // }
