@@ -37,7 +37,7 @@ class UpdateWine extends Component {
 
     this.setState((state) => {
       return {
-        wines: { ...state.wines, [event.target.name]: event.target.value }
+        wine: { ...state.wine, [event.target.name]: event.target.value }
       }
     })
   }
