@@ -1,16 +1,21 @@
 # Project 3: Sour Grapes (Client)
+Sour Grapes is a web app for wine lovers! Review and keep track of wines you've tried and never forget tasting notes again!
 
 ## Other Important Links & Resources Used:
+[React CRUD Lesson](https://git.generalassemb.ly/ga-wdi-boston/react-crud/tree/winter/training "React-crud Lesson")
 
 ## Planning and Story: Development Process and Problem-Solving Strategy:
-### Planning:
 
-- I started by brainatorming and coming up with my project idea. I decided on a place for wine lovers to rate and review wines theyve tried. Next, I created an ERD to show the relationship between our resources (the user, and wines). Next, I drew up a wireframe to plan out how the UI would appear to the user. I wrote user stories to layout the functionality I wanted to create for the user experience.
+### Planning:
+- I started by brainatorming and coming up with my project idea. I decided on a place for wine lovers to rate and review wines and keep track of ones theyve tried. Next, I created an ERD to show the relationship between our resources (the user, and wines). Next, I drew up a wireframe to plan out how the UI would appear to the user. I then wrote user stories to layout the functionality I wanted to create for the user experience.
 
 ### CRUD Wines:
-- As a team, we started with our create post action together, then show one post since we would need this functionality before other CRUD actions. At this point, we split up into 2 groups and utilized peer programming to complete the other actions. With our comment resource, since it is a sub-document, we completed the 3 comment actions together since they were more complex than post.
+I went trhough methodically and added each CRUD action one by one, starting with Create, then my two Show components, and lastly my Update and Delete actions. For each CRUD action, I went through and created the component, added the route to App.js, and made sure to add my axios calls in api/wines.js. One by one, as each CRUD action was added, I began to test. Once testing and troubleshooting an individual component was complete and functioning properly, I made sure to commit my work.
+
 ### Problem-Solving:
-- We were having issues with the asynchronous flow of the code when creating/updating/deleting comments. The ShowPost page (where comments live) was re-rendering before we recieved the API response. We ended up having to use the async/await syntax to make our code pattern synchronous allowing the re-render function to use the response from the API.
+-Troubleshooting 'Update': I had a few bugs with my update component that I had to troubleshoot to fix. First, My url path on my app was going to 'wines/undefined' because I was directing it to 'id' instead of '_id' and I had not defined 'id'. Next, I updated 'wine' to be 'wines' in my this.setState on my 'ShowUserWines' component. These 2 changes fized my Update bug, to make it work properly.
+-Troubleshooting 'Delete':
+
 ## User Stories:
 -As a user, I want to be able to sign up
 -As a user, I want to be able to sign in
