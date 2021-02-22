@@ -118,7 +118,7 @@ class UpdateWine extends Component {
               </Form.Group>
 
               <Form.Group controlId="formBasicRegion">
-                <Form.Label>Type</Form.Label>
+                <Form.Label>Region</Form.Label>
                 <Form.Control
                   type="text"
                   name="region"
