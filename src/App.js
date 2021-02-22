@@ -14,8 +14,8 @@ import ChangePassword from './components/ChangePassword/ChangePassword'
 import CreateWine from './components/wines/CreateWine/CreateWine'
 import WineIndexAll from './components/wines/IndexAllWines/IndexAllWines'
 import WineIndexUser from './components/wines/ShowUserWines/ShowUserWines'
-import WineUpdate from './components/wines/UpdateWine/UpdateWine'
-import WineDelete from './components/wines/DeleteWine/DeleteWine'
+import UpdateWine from './components/wines/UpdateWine/UpdateWine'
+import DeleteWine from './components/wines/DeleteWine/DeleteWine'
 
 class App extends Component {
   constructor (props) {
@@ -82,10 +82,10 @@ class App extends Component {
             <WineIndexUser msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/update-wine/:id' render={() => (
-            <WineUpdate msgAlert={this.msgAlert} user={user} />
+            <UpdateWine msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/delete-wine/:id' render={() => (
-            <WineDelete msgAlert={this.msgAlert} user={user} />
+            <DeleteWine msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

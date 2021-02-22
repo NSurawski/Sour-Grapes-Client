@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
 
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 import { wineIndexUser } from './../../../api/wines'
+// import { wineUpdate } from './../../../api/wines'
+// import { wineDelete } from './../../../api/wines'
 
 class WineIndexUser extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
+      wine: null,
+      exists: true,
+      deleted: false,
       wines: [],
       updateReviewClicked: false,
       deleteReviewClicked: false
@@ -74,9 +79,11 @@ class WineIndexUser extends Component {
           <Card.Subtitle className="mb-2 text-muted">{wine.grape}</Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">{wine.region}</Card.Subtitle>
           <Card.Text>{wine.review}</Card.Text>
-          <Button variant="secondary" onClick={this.handleUpdate}>
+          <Link to={`/update-wine/${wine._id}`}>
+            <Button variant="secondary">
               Update
-          </Button>
+            </Button>
+          </Link>
           <Button variant="danger" onClick={this.handleDelete}>
               Delete
           </Button>

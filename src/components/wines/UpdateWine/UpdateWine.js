@@ -53,6 +53,7 @@ class UpdateWine extends Component {
     const { wine } = this.state
 
     const id = match.params.id
+    console.log('this is id:', id)
     wineUpdate(id, wine, user)
       .then(res => this.setState({ wine: res.data.wines }))
       .then(() => {
