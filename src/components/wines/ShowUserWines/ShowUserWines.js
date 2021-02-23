@@ -46,8 +46,10 @@ class WineIndexUser extends Component {
   }
   fetchWines = () => {
     const { msgAlert, user } = this.props
+    // console.log('this is user', user)
     wineIndexUser(user)
       .then(res => {
+        // console.log('this is res', res)
         this.setState({ wines: res.data.wines })
       })
       .then(() => msgAlert({
